@@ -1,0 +1,318 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: index.html");
+    exit();
+}
+
+$username = $_SESSION['username'];
+echo $username;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksKart</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="header-1">
+
+        <a href="#" class="logo"> <img src="./kartLogo.jpg" height="25px" width="25px"> BooksKart </a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="http://localhost/book_shop/?p=cart" class="fas fa-shopping-cart"></a>
+            <a href="http://localhost/book_shop/?p=edit_account" id="login-btn" class="fas fa-user"></a>
+
+        </div>
+
+    </div>
+
+    <div class="header-2">
+        <nav class="navbar">
+            <a href="http://localhost/book_shop/">Books</a>
+            <a href="#arrivals">arrivals</a>
+            <a href="#reviews">reviews</a>
+            <a href="http://localhost/book_shop/?p=edit_account">Profile</a>
+        </nav>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- bottom navbar  -->
+
+<nav class="bottom-navbar">
+    <a href="#home" class="fas fa-home"></a>
+    <a href="#featured" class="fas fa-list"></a>
+    <a href="#arrivals" class="fas fa-tags"></a>
+    <a href="#reviews" class="fas fa-comments"></a>
+    <a href="#blogs" class="fas fa-blog"></a>
+</nav>
+
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>upto 75% off</h3>
+            <p>Catch your own vibe with the perfect assortment of genres to suit your style </p>
+            <p>Limited time offer for prices as low as <strong>75%</strong> off</p>
+            <a href="http://localhost/book_shop/" class="btn">shop now</a>
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide"><img src="./bannedbook.jpg" alt=""></a>
+            </div>
+            <img src="image/stand.png" class="stand" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ense  -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-shipping-fast"></i>
+        <div class="content">
+            <h3>free shipping</h3>
+            <p>order over Rs 450</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-lock"></i>
+        <div class="content">
+            <h3>secure payment</h3>
+            <p>100% secure payment</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+            <h3>easy returns</h3>
+            <p>7 days returns</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+
+<!-- arrivals section starts  -->
+
+<section class="arrivals" id="arrivals">
+
+    <h1 class="heading"> <span>new arrivals</span> </h1>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="http://localhost/book_shop/?p=view_product&id=c51ce410c124a10e0db5e4b97fc2af39" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/anemberintheashes.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>An Ember In The Ashes--By Sabaa Tahir</h3>
+                    <div class="price">Rs 249 <span>Rs 315</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>  
+
+        </div>
+
+    </div>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="http://localhost/book_shop/?p=view_product&id=1679091c5a880faf6fb5e6087eb1b2dc" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/thefaultin ourstars.jpg" alt="book2">
+                </div>
+                <div class="content">
+                    <h3>The faltu in our stars--By John green</h3>
+                    <div class="price">Rs 315 <span>Rs 475</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="http://localhost/book_shop/?p=view_product&id=e4da3b7fbbce2345d7772b0674a318d5" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/The-Alchemist-.jpg" alt="book3">
+                </div>
+                <div class="content">
+                    <h3>The Alchemist--By Paulo Coelho</h3>
+                    <div class="price">Rs 249 <span>Rs 315</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- arrivals section ends -->
+
+
+<!-- reviews section starts  -->
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading"> <span>client's reviews</span> </h1>
+
+    <div class="swiper reviews-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/xavier.jpg" alt="">
+                <h3>Xavier</h3>
+                <p>Exactly what young india needs right now</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/randomP1.jpeg" alt="">
+                <h3>Shweta Tiwary</h3>
+                <p>Reading really helped me out in tough times and I'm glad I came through this site..pricing is decent 
+                    and collection nice enough for anyone looking for a change in reading taste..would def recommend others.
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- reviews section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> arrivals </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="http://localhost/book_shop/?p=edit_account"> <i class="fas fa-arrow-right"></i> account info </a>
+            <a href="http://localhost/book_shop/?p=my_account"> <i class="fas fa-arrow-right"></i> ordered items </a>
+            
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91 74258 12345 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 68345 99846 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> thebookskart@gmail.com </a>
+            
+        </div>
+        
+    </div>
+
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
